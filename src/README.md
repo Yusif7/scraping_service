@@ -12,3 +12,11 @@ git push -u origin main
 git remote add origin https://github.com/Yusif7/scraping_service.git
 git branch -M main
 git push -u origin main
+
+
+Git status
+The Git status command gives us all the necessary information about the current branch. 
+Git add . - for everything
+Git commit - Once we reach a certain point in development, we want to save our changes 
+Git push - After committing your changes, the next thing you want to do is send your changes to the remote server. 
+Git revert - Sometimes we need to undo the changes that we've made.
