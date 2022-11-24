@@ -2,7 +2,7 @@ from django.db import models
 
 from .utils import from_ru_to_en
 
-class city(models.Model):
+class City(models.Model):
     # Charfield string text wthi limited lenght
     # Parameter unigue catch and delete dublicates
     name = models.CharField(max_length=50, verbose_name='Название города', unique=True)
@@ -52,7 +52,7 @@ class Vacancy(models.Model):
     # We should use DRY rule, and for it we use db properties in our one-to-many
     # foreign_key - it is mean than one object can contain many another objects one city many vacansies
     # on delete define wat we do with many objects if one main object deleted , Cascade also deleted all objecst
-    city = models.ForeignKey('city', on_delete=models.CASCADE, verbose_name='Город')
+    city = models.ForeignKey('City', on_delete=models.CASCADE, verbose_name='Город')
     language = models.ForeignKey('Language', on_delete=models.CASCADE, verbose_name='Язык программирования')
 
     # Define time when vacancy was add, auto_now_add define auto and add to our model
