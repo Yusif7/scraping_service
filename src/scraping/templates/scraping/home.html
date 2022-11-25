@@ -14,15 +14,23 @@
         {{obj.timestamp}}
         </div>
     </div>
+    {% empty %}
+    <div class="row">
+        <h3 class="mx-auto text-center">We do not find any information</h3>
+    </div>
+    
 {% endfor %} 
-<form method='GET' action="">
-    <label for="fname">City:</label><br>
-    <input type="text" id="fname" name="city"><br>
-    <label for="Lname">Major:</label><br>
-    <input type="text" id="Lname" name="language"><br>
-    <input type="submit" value="Submit">
-</form> 
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <form method='GET' action="">
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+              <button type="submit" class="btn btn-primary">Submit</button> 
+        </form> 
+    </div>
+</div>
+
+
 {% endblock %} 
-
-
     
